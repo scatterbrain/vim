@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="icon" href="/hg.cgi/vim_erlang/static/hgicon.png" type="image/png">
+<meta name="robots" content="index, nofollow" />
+<link rel="stylesheet" href="/hg.cgi/vim_erlang/static/style.css" type="text/css" />
+
+<title>vim_erlang:README_erlang</title>
+</head>
+<body>
+
+<div class="buttons">
+<a href="/hg.cgi/vim_erlang/log/36">changelog</a>
+<a href="/hg.cgi/vim_erlang/shortlog/36">shortlog</a>
+<a href="/hg.cgi/vim_erlang/tags">tags</a>
+<a href="/hg.cgi/vim_erlang/rev/d2d2a1806d10">changeset</a>
+<a href="/hg.cgi/vim_erlang/file/d2d2a1806d10/">files</a>
+<a href="/hg.cgi/vim_erlang/log/d2d2a1806d10/README_erlang">revisions</a>
+<a href="/hg.cgi/vim_erlang/annotate/d2d2a1806d10/README_erlang">annotate</a>
+<a href="/hg.cgi/vim_erlang/raw-file/d2d2a1806d10/README_erlang">raw</a>
+</div>
+
+<h2>README_erlang</h2>
+
+<table>
+<tr>
+ <td class="metatag">changeset 36:</td>
+ <td><a href="/hg.cgi/vim_erlang/rev/d2d2a1806d10">d2d2a1806d10</a></td></tr>
+
+
+<tr>
+ <td class="metatag">author:</td>
+ <td>&#79;&#115;&#99;&#97;&#114;&#32;&#72;&#101;&#108;&#108;&#115;&#116;&#114;&#63;&#109;&#32;&#60;&#111;&#115;&#99;&#97;&#114;&#64;&#101;&#114;&#108;&#97;&#110;&#103;&#45;&#99;&#111;&#110;&#115;&#117;&#108;&#116;&#105;&#110;&#103;&#46;&#99;&#111;&#109;&#62;</td></tr>
+<tr>
+ <td class="metatag">date:</td>
+ <td>Fri May 09 15:54:54 2008 +0100 (3 months ago)</td></tr>
+<tr>
+ <td class="metatag">permissions:</td>
+ <td>-rw-r--r--</td></tr>
+<tr>
+  <td class="metatag">description:</td>
+  <td>Fix bug when several atoms in single quotes are on the same line.</td>
+</tr>
+</table>
+
+<pre>
+<div class="parity0"><a class="lineno" href="#l1" id="l1">     1</a>Vim Erlang plugin
+</div><div class="parity1"><a class="lineno" href="#l2" id="l2">     2</a>
+</div><div class="parity0"><a class="lineno" href="#l3" id="l3">     3</a>This is a pre-release!!!
+</div><div class="parity1"><a class="lineno" href="#l4" id="l4">     4</a>Treat it as such and please report problems to oscar@oscarh.net
+</div><div class="parity0"><a class="lineno" href="#l5" id="l5">     5</a>
+</div><div class="parity1"><a class="lineno" href="#l6" id="l6">     6</a>Installation:
+</div><div class="parity0"><a class="lineno" href="#l7" id="l7">     7</a>* Unix
+</div><div class="parity1"><a class="lineno" href="#l8" id="l8">     8</a>	- For local installation (one user only) extract the vim_erlang.tgz
+</div><div class="parity0"><a class="lineno" href="#l9" id="l9">     9</a>	  to your ~/.vim directory
+</div><div class="parity1"><a class="lineno" href="#l10" id="l10">    10</a>	- For global installation extract the vim_erlang.tgz to your
+</div><div class="parity0"><a class="lineno" href="#l11" id="l11">    11</a>	  vim runtime directory (e.g. /usr/share/vim/vimX/)
+</div><div class="parity1"><a class="lineno" href="#l12" id="l12">    12</a>
+</div><div class="parity0"><a class="lineno" href="#l13" id="l13">    13</a>* Win
+</div><div class="parity1"><a class="lineno" href="#l14" id="l14">    14</a>	- For local installation (one user only) extract the vim_erlang.tgz
+</div><div class="parity0"><a class="lineno" href="#l15" id="l15">    15</a>	  to your directory
+</div><div class="parity1"><a class="lineno" href="#l16" id="l16">    16</a>	- For global installation extract the vim_erlang.tgz to your
+</div><div class="parity0"><a class="lineno" href="#l17" id="l17">    17</a>	  to your directory
+</div><div class="parity1"><a class="lineno" href="#l18" id="l18">    18</a>
+</div><div class="parity0"><a class="lineno" href="#l19" id="l19">    19</a>* Highlighting of Erlang function heads
+</div><div class="parity1"><a class="lineno" href="#l20" id="l20">    20</a>	- You need to add the Highlight definition &quot;ErlangFunHead&quot; to your color
+</div><div class="parity0"><a class="lineno" href="#l21" id="l21">    21</a>	  scheme if you want to use the highlighting of function heads.
+</div><div class="parity1"><a class="lineno" href="#l22" id="l22">    22</a>
+</div><div class="parity0"><a class="lineno" href="#l23" id="l23">    23</a>Settings:
+</div><div class="parity1"><a class="lineno" href="#l24" id="l24">    24</a>You can set various variables in your vimrc file to make the plugin behave
+</div><div class="parity0"><a class="lineno" href="#l25" id="l25">    25</a>differently.
+</div><div class="parity1"><a class="lineno" href="#l26" id="l26">    26</a>
+</div><div class="parity0"><a class="lineno" href="#l27" id="l27">    27</a>Syntax options:
+</div><div class="parity1"><a class="lineno" href="#l28" id="l28">    28</a>The options expect a 0 value for disabling and a non-zero (e.g. 1) for enabling.
+</div><div class="parity0"><a class="lineno" href="#l29" id="l29">    29</a>
+</div><div class="parity1"><a class="lineno" href="#l30" id="l30">    30</a>* Highlight all Erlang bifs as keywords: (default: 0)
+</div><div class="parity0"><a class="lineno" href="#l31" id="l31">    31</a>	g:erlangHighlightBif 
+</div><div class="parity1"><a class="lineno" href="#l32" id="l32">    32</a>* Highlight function heads (you need to edit your color scheme, default: 0)
+</div><div class="parity0"><a class="lineno" href="#l33" id="l33">    33</a>	g:erlangHighlightFunHead (default: 0)
+</div><div class="parity1"><a class="lineno" href="#l34" id="l34">    34</a>* Highlight words (identifiers, key- / reserved words, default: 1)
+</div><div class="parity0"><a class="lineno" href="#l35" id="l35">    35</a>	g:erlangHighLightWords
+</div><div class="parity1"><a class="lineno" href="#l36" id="l36">    36</a>* Highlight Erlang operators (default: 1)
+</div><div class="parity0"><a class="lineno" href="#l37" id="l37">    37</a>	g:erlangHighLightOperators=0
+</div><div class="parity1"><a class="lineno" href="#l38" id="l38">    38</a>
+</div><div class="parity0"><a class="lineno" href="#l39" id="l39">    39</a>Folding options:
+</div><div class="parity1"><a class="lineno" href="#l40" id="l40">    40</a>The options expect a 0 value for disabling and a non-zero (e.g. 1) for enabling.
+</div><div class="parity0"><a class="lineno" href="#l41" id="l41">    41</a>
+</div><div class="parity1"><a class="lineno" href="#l42" id="l42">    42</a>* Enable/disable folding: (default: 1)
+</div><div class="parity0"><a class="lineno" href="#l43" id="l43">    43</a>	g:erlangFold
+</div><div class="parity1"><a class="lineno" href="#l44" id="l44">    44</a>* Splitting functions if a new function head appears: (default: 0)
+</div><div class="parity0"><a class="lineno" href="#l45" id="l45">    45</a>	g:erlangFoldSplitFunction
+</div><div class="parity1"><a class="lineno" href="#l46" id="l46">    46</a>
+</div><div class="parity0"><a class="lineno" href="#l47" id="l47">    47</a>Compiler options:
+</div><div class="parity1"><a class="lineno" href="#l48" id="l48">    48</a>Options expect a string.
+</div><div class="parity0"><a class="lineno" href="#l49" id="l49">    49</a>
+</div><div class="parity1"><a class="lineno" href="#l50" id="l50">    50</a>* Specifying the complier to use
+</div><div class="parity0"><a class="lineno" href="#l51" id="l51">    51</a>	g:erlangCompiler (default: &quot;emake&quot;)
+</div><div class="parity1"><a class="lineno" href="#l52" id="l52">    52</a>	Values:
+</div><div class="parity0"><a class="lineno" href="#l53" id="l53">    53</a>		- &quot;emake&quot;
+</div><div class="parity1"><a class="lineno" href="#l54" id="l54">    54</a>			Will call erl -make at the directory above the current
+</div><div class="parity0"><a class="lineno" href="#l55" id="l55">    55</a>			working	directory
+</div><div class="parity1"><a class="lineno" href="#l56" id="l56">    56</a>			Expects all erlang sources to exist in src/
+</div><div class="parity0"><a class="lineno" href="#l57" id="l57">    57</a>		- &quot;erlc&quot;
+</div><div class="parity1"><a class="lineno" href="#l58" id="l58">    58</a>			Calls erlc with the current file as argument
+</div><div class="parity0"><a class="lineno" href="#l59" id="l59">    59</a>			Also adds -I ../include
+</div><div class="parity1"><a class="lineno" href="#l60" id="l60">    60</a>		- &quot;erlc-debug&quot;
+</div><div class="parity0"><a class="lineno" href="#l61" id="l61">    61</a>			Calls erlc with the current file as argument
+</div><div class="parity1"><a class="lineno" href="#l62" id="l62">    62</a>			Also adds -I ../include and +debug_info
+</div>
+</pre>
+
+
+<div class="logo">
+<a href="http://www.selenic.com/mercurial/">
+<img src="/hg.cgi/vim_erlang/static/hglogo.png" width=75 height=90 border=0 alt="mercurial"></a>
+</div>
+
+</body>
+</html>
+
