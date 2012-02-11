@@ -32,10 +32,7 @@ map! <C-space> <esc>
 set backspace=2 " make backspace work normal (non-vi style - deletes also previously inserted characters)
 set whichwrap+=<,>,h,l  " backspace and cursor keys wrap to next/prev lines
 
-" Each indentation level is four spaces. Tabs are not used.
-"set softtabstop=4 shiftwidth=4 expandtab
-
-" Erlang mode with spaces
+"Spaces instead of tabs. Both Erlang / Python style guide.
 set tabstop=8
 set shiftwidth=4
 set softtabstop=4
