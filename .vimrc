@@ -69,10 +69,15 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
+"Syntastic plugin
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+"Supertab plugin
+au FileType python set omnifunc=pythoncomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest,preview
 
 set wrap
 set textwidth=79
@@ -97,6 +102,8 @@ nnoremap  <up> gk
 
 nnoremap <leader>w <C-w>v<C-w>l
 
+" Gundo plugin for git history browsing
+map <leader>h :GundoToggle<CR>
 
 "Disable beeping
 set noerrorbells

@@ -1,4 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/mbhamala'
-let g:netrw_dirhist_2='/Users/mbhamala/dev/feral/src/cage/src/main/resources/cage'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/mbhamala/dev/feral/src/feral-server'
+let g:netrw_dirhist_2='/Users/mbhamala/dev/duality/src/duality-server'
+let g:netrw_dirhist_3='/Users/mbhamala/dev/feral/src/feral-server'
+let g:netrw_dirhist_4='/Users/mbhamala/dev/duality/src/duality-server'
+let g:netrw_dirhist_5='/Users/mbhamala/dev/feral/src/feral-server'
+let g:netrw_dirhist_6='/Users/mbhamala/dev/feral/src/cage'
+let g:netrw_dirhist_7='/Users/mbhamala/dev/feral/src/feral-server'
