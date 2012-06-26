@@ -6,8 +6,8 @@ set background=dark
 "colorscheme murphy
 "colorscheme railscasts
 "colorscheme dim
-colorscheme vividchalk
-"colorscheme solarized
+"colorscheme vividchalk
+colorscheme solarized
 set nocompatible
 syntax on
 filetype plugin indent on
@@ -15,6 +15,8 @@ filetype plugin indent on
 " Highlight search terms...
 set hlsearch
 set incsearch 
+"clear search term with esc
+nnoremap <esc> :noh<return><esc>
 
 "allow deleting selection without updating the clipboard (yank buffer)
 vnoremap x "_x
@@ -37,6 +39,9 @@ set tabstop=8
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
+map <leader>j :RopeGotoDefinition<CR>
+map <leader>r :RopeRename<CR>
 
 "Hilight overlong lines
 highlight OverLength ctermbg=red ctermfg=white guibg=#24010F
@@ -240,7 +245,8 @@ augroup ruby
 augroup END 
 
 " For commenting erlang files
-:vnoremap <f4> :s/^/%<cr>
-:vnoremap <f5> :s/%<cr>
+au FileType erlang vnoremap <f4> :s/^/%<cr>
+au FileType erlang vnoremap <f5> :s/%<cr>
 
-
+au FileType python vnoremap <f4> :s/^/#<cr>
+au FileType python vnoremap <f5> :s/#<cr>
