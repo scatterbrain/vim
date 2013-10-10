@@ -22,6 +22,16 @@ nnoremap <esc> :noh<return><esc>
 vnoremap x "_x
 vnoremap X "_X
 
+"" For vundle to work
+"filetype off
+
+"" Setup vundle
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
+
+"" Vim installed bundles
+"Bundle 'Valloric/YouCompleteMe'
+
 let mapleader = ","
 set ignorecase 
 set smartcase
@@ -80,9 +90,9 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 "Supertab plugin
-au FileType python set omnifunc=pythoncomplete#Complete
-let g:SuperTabDefaultCompletionType = "context"
-set completeopt=menuone,longest,preview
+"au FileType python set omnifunc=pythoncomplete#Complete
+"let g:SuperTabDefaultCompletionType = "context"
+"set completeopt=menuone,longest,preview
 
 set wrap
 set textwidth=79
