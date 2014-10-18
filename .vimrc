@@ -20,9 +20,15 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+
+"Javascript plugins: http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'jelera/vim-javascript-syntax'
-
+Plugin 'pangloss/vim-javascript'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'Raimondi/delimitMate'
+Plugin 'scrooloose/syntastic' "NOTE! LINTER FOR JS must be installed with npm install -g jshint
+ 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -30,6 +36,12 @@ filetype plugin indent on    " required
 
 "Mustache/Handlebar
 let g:mustache_abbreviations = 1
+
+"Syntastic
+" This does what it says on the tin. It will check your file on open too, not just on save.
+" You might not want this, so just leave it out if you don't.
+let g:syntastic_check_on_open=1
+
 
 " Highlight search terms...
 set hlsearch
