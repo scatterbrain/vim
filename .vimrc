@@ -10,7 +10,26 @@ set background=dark
 colorscheme solarized
 set nocompatible
 syntax on
-filetype plugin indent on
+
+" VUNDLE SPESIFIC "
+filetype off 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'jelera/vim-javascript-syntax'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" VUNDLE END "
+
+"Mustache/Handlebar
+let g:mustache_abbreviations = 1
 
 " Highlight search terms...
 set hlsearch
@@ -83,16 +102,6 @@ set hlsearch
 nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
-
-"Syntastic plugin
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-"Supertab plugin
-"au FileType python set omnifunc=pythoncomplete#Complete
-"let g:SuperTabDefaultCompletionType = "context"
-"set completeopt=menuone,longest,preview
 
 set wrap
 set textwidth=79
