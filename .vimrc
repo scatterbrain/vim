@@ -22,25 +22,45 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 
 "Javascript plugins: http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
+
 Plugin 'mustache/vim-mustache-handlebars'
+"Mustache/Handlebar
+let g:mustache_abbreviations = 1
+
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/syntastic' "NOTE! LINTER FOR JS must be installed with npm install -g jshint
- 
+"Syntastic
+" This does what it says on the tin. It will check your file on open too, not just on save.
+" You might not want this, so just leave it out if you don't.
+let g:syntastic_check_on_open=1
+
+
+Plugin 'Valloric/YouCompleteMe' "NOTE! You need to install cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer --omnisharp-completer
+"NOTE2: If MacVim crashes to Python error, install it using brew with
+"a spesific version
+"cd /usr/local/Library/Formula
+"git checkout db04c3a /usr/local/Library/Formula/macvim.rb
+"brew uninstall macvim
+"brew install macvim
+
+"You CompleteMe
+" These are the tweaks I apply to YCM's config, you don't need them but they might help.
+" YCM gives you popups and splits by default that some people might not like, so these should tidy it up a bit for you.
+let g:ycm_add_preview_to_completeopt=0
+let g:ycm_confirm_extra_conf=0
+set completeopt-=preview
+
+Plugin 'marijnh/tern_for_vim' "~/.vim/bundle/tern_for_vim && npm install
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " VUNDLE END "
 
-"Mustache/Handlebar
-let g:mustache_abbreviations = 1
 
-"Syntastic
-" This does what it says on the tin. It will check your file on open too, not just on save.
-" You might not want this, so just leave it out if you don't.
-let g:syntastic_check_on_open=1
 
 
 " Highlight search terms...
