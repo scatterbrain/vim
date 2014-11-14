@@ -36,7 +36,7 @@ Plugin 'scrooloose/syntastic' "NOTE! LINTER FOR JS must be installed with npm in
 " This does what it says on the tin. It will check your file on open too, not just on save.
 " You might not want this, so just leave it out if you don't.
 let g:syntastic_check_on_open=1
-
+let g:syntastic_javascript_checkers = ['jsxhint']
 
 Plugin 'Valloric/YouCompleteMe' "NOTE! You need to install cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer --omnisharp-completer
 "NOTE2: If MacVim crashes to Python error, install it using brew with
