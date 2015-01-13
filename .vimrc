@@ -31,12 +31,13 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Raimondi/delimitMate'
-Plugin 'scrooloose/syntastic' "NOTE! LINTER FOR JS must be installed with npm install -g jshint
+Plugin 'scrooloose/syntastic' "NOTE! LINTER FOR JS must be installed with npm install -g jshint, npm install -g jsxhint
 "Syntastic
 " This does what it says on the tin. It will check your file on open too, not just on save.
 " You might not want this, so just leave it out if you don't.
 let g:syntastic_check_on_open=1
-
+" Use jsxhint
+let g:syntastic_javascript_checkers = ['jsxhint']
 
 Plugin 'Valloric/YouCompleteMe' "NOTE! You need to install cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer --omnisharp-completer
 "NOTE2: If MacVim crashes to Python error, install it using brew with
@@ -54,14 +55,16 @@ let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
 
 Plugin 'marijnh/tern_for_vim' "~/.vim/bundle/tern_for_vim && npm install
+Plugin 'kchmck/vim-coffee-script'
+
+Plugin 'mxw/vim-jsx'
+Plugin 'wting/rust.vim'
+Plugin 'elixir-lang/vim-elixir'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " VUNDLE END "
-
-
-
 
 " Highlight search terms...
 set hlsearch
@@ -301,3 +304,19 @@ au FileType erlang vnoremap <f5> :s/%<cr>
 
 au FileType python vnoremap <f4> :s/^/#<cr>
 au FileType python vnoremap <f5> :s/#<cr>
+
+au FileType elixir vnoremap <f4> :s/^/#<cr>
+au FileType elixir vnoremap <f5> :s/#<cr>
+
+
+"Syntastic stuff
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_elixir_checker = 1 
+map <leader>y :SyntasticCheck elixir<CR>
