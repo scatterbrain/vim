@@ -60,6 +60,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'mxw/vim-jsx'
 Plugin 'wting/rust.vim'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'Valloric/MatchTagAlways'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -320,3 +321,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_elixir_checker = 1 
 map <leader>y :SyntasticCheck elixir<CR>
+
+"Indent HTML header tags as well
+let g:html_indent_inctags = "html,body,head,tbody,p" 
