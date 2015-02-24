@@ -38,6 +38,9 @@ Plugin 'scrooloose/syntastic' "NOTE! LINTER FOR JS must be installed with npm in
 let g:syntastic_check_on_open=1
 " Use jsxhint
 let g:syntastic_javascript_checkers = ['jsxhint']
+" You need https://github.com/ten0s/syntaxerl installed
+let g:syntastic_erlang_checkers=['syntaxerl']
+let g:syntastic_elixir_checkers=['syntaxerl']
 
 Plugin 'Valloric/YouCompleteMe' "NOTE! You need to install cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer --omnisharp-completer
 "NOTE2: If MacVim crashes to Python error, install it using brew with
