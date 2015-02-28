@@ -64,6 +64,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'wting/rust.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'Valloric/MatchTagAlways'
+Plugin 'tpope/vim-fireplace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
