@@ -296,7 +296,7 @@ let colors_name = "solarized"
 " neutral gray monotone palette component)
 if (has("gui_running") && g:solarized_degrade == 0)
     let s:vmode       = "gui"
-    let s:baseblack   = "#001E26"    
+    let s:baseblack   = "#00252E"    
     let s:base03      = "#002b36"
     let s:base02      = "#073642"
     let s:base01      = "#586e75"
@@ -655,7 +655,7 @@ exe "hi! IncSearch"      .s:fmt_stnd   .s:fg_orange .s:bg_none
 exe "hi! Search"         .s:fmt_revr   .s:fg_yellow .s:bg_none
 exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
-exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_none
+exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_baseblack
 exe "hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none
 exe "hi! VertSplit"      .s:fmt_bold   .s:bg_none .s:bg_none
 exe "hi! Title"          .s:fmt_bold   .s:fg_orange .s:bg_none
