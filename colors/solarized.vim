@@ -638,8 +638,8 @@ else
     exe "hi! NonText"        .s:fmt_bold   .s:fg_base01 .s:bg_none
 endif
 if (has("gui_running")) || &t_Co > 8
-    exe "hi! StatusLine"     .s:fmt_none   .s:fg_base01 .s:bg_base02
-    exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base01 .s:fg_base02
+    exe "hi! StatusLine"     .s:fmt_none   .s:fg_base03 .s:bg_base02
+    exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base03 .s:bg_base02
     "exe "hi! Visual"         .s:fmt_stnd   .s:fg_none   .s:bg_base02
     exe "hi! Visual"         .s:fmt_none   .s:fg_base03 .s:bg_base01
 else
