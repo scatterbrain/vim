@@ -10,6 +10,9 @@ set background=dark
 colorscheme solarized
 set nocompatible
 syntax on
+set guifont=Inconsolata:h15
+
+set fillchars=vert:\ 
 
 " VUNDLE SPESIFIC "
 filetype off 
@@ -64,6 +67,11 @@ Plugin 'mxw/vim-jsx'
 Plugin 'wting/rust.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'Valloric/MatchTagAlways'
+
+" Clojure
+Plugin 'tpope/vim-leiningen.git'
+Plugin 'tpope/vim-projectionist.git'
+Plugin 'tpope/vim-dispatch.git'
 Plugin 'tpope/vim-fireplace'
 
 " All of your Plugins must be added before the following line
