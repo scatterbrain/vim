@@ -638,8 +638,8 @@ else
     exe "hi! NonText"        .s:fmt_bold   .s:fg_base01 .s:bg_none
 endif
 if (has("gui_running")) || &t_Co > 8
-    exe "hi! StatusLine"     .s:fmt_none   .s:fg_base03 .s:bg_base02
-    exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base03 .s:bg_base02
+    exe "hi! StatusLine"     .s:fmt_none   .s:fg_base03 .s:bg_none
+    exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base03 .s:bg_none
     "exe "hi! Visual"         .s:fmt_stnd   .s:fg_none   .s:bg_base02
     exe "hi! Visual"         .s:fmt_none   .s:fg_base03 .s:bg_base01
 else
@@ -653,7 +653,7 @@ exe "hi! IncSearch"      .s:fmt_stnd   .s:fg_orange .s:bg_none
 exe "hi! Search"         .s:fmt_revr   .s:fg_yellow .s:bg_none
 exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
-exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_base02
+exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_none
 exe "hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none
 exe "hi! VertSplit"      .s:fmt_bold   .s:bg_none .s:bg_none
 exe "hi! Title"          .s:fmt_bold   .s:fg_orange .s:bg_none
