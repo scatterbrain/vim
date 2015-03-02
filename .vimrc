@@ -43,7 +43,6 @@ let g:syntastic_check_on_open=1
 let g:syntastic_javascript_checkers = ['jsxhint']
 " You need https://github.com/ten0s/syntaxerl installed
 let g:syntastic_erlang_checkers=['syntaxerl']
-let g:syntastic_elixir_checkers=['syntaxerl']
 
 Plugin 'Valloric/YouCompleteMe' "NOTE! You need to install cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer --omnisharp-completer
 "NOTE2: If MacVim crashes to Python error, install it using brew with
@@ -73,6 +72,7 @@ Plugin 'tpope/vim-leiningen.git'
 Plugin 'tpope/vim-projectionist.git'
 Plugin 'tpope/vim-dispatch.git'
 Plugin 'tpope/vim-fireplace'
+Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -118,7 +118,7 @@ set softtabstop=4
 set expandtab
 
 map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
+map <leader>r :CtrlPMixed<CR>
 
 "Hilight overlong lines
 highlight OverLength ctermbg=red ctermfg=white guibg=#24010F
