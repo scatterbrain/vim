@@ -296,6 +296,7 @@ let colors_name = "solarized"
 " neutral gray monotone palette component)
 if (has("gui_running") && g:solarized_degrade == 0)
     let s:vmode       = "gui"
+    let s:baseblack   = "#00252E"    
     let s:base03      = "#002b36"
     let s:base02      = "#073642"
     let s:base01      = "#586e75"
@@ -470,6 +471,7 @@ endif
 
 exe "let s:bg_none      = ' ".s:vmode."bg=".s:none   ."'"
 exe "let s:bg_back      = ' ".s:vmode."bg=".s:back   ."'"
+exe "let s:bg_baseblack    = ' ".s:vmode."bg=".s:baseblack ."'"
 exe "let s:bg_base03    = ' ".s:vmode."bg=".s:base03 ."'"
 exe "let s:bg_base02    = ' ".s:vmode."bg=".s:base02 ."'"
 exe "let s:bg_base01    = ' ".s:vmode."bg=".s:base01 ."'"
@@ -638,8 +640,8 @@ else
     exe "hi! NonText"        .s:fmt_bold   .s:fg_base01 .s:bg_none
 endif
 if (has("gui_running")) || &t_Co > 8
-    exe "hi! StatusLine"     .s:fmt_none   .s:fg_base03 .s:bg_base02
-    exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base03 .s:bg_base02
+    exe "hi! StatusLine"     .s:fmt_none   .s:fg_base03 .s:bg_baseblack
+    exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base03 .s:bg_baseblack
     "exe "hi! Visual"         .s:fmt_stnd   .s:fg_none   .s:bg_base02
     exe "hi! Visual"         .s:fmt_none   .s:fg_base03 .s:bg_base01
 else
@@ -653,7 +655,7 @@ exe "hi! IncSearch"      .s:fmt_stnd   .s:fg_orange .s:bg_none
 exe "hi! Search"         .s:fmt_revr   .s:fg_yellow .s:bg_none
 exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
-exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_none
+exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_baseblack
 exe "hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none
 exe "hi! VertSplit"      .s:fmt_bold   .s:bg_none .s:bg_none
 exe "hi! Title"          .s:fmt_bold   .s:fg_orange .s:bg_none
