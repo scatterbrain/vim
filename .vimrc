@@ -74,7 +74,9 @@ Plugin 'tpope/vim-leiningen.git'
 Plugin 'tpope/vim-projectionist.git'
 Plugin 'tpope/vim-dispatch.git'
 Plugin 'tpope/vim-fireplace'
+
 Plugin 'kien/ctrlp.vim'
+Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
