@@ -11,7 +11,7 @@ colorscheme solarized
 set nocompatible
 syntax on
 "set guifont=Inconsolata:h13
-set guifont=Source\ Code\ Pro:h12
+set guifont=Source\ Code\ Pro:h13
 
 
 set fillchars=vert:\ 
