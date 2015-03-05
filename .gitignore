@@ -2,3 +2,7 @@
 *.un~
 *.pyc
 bundle
+backup
+swap
+undo
+viminfo
