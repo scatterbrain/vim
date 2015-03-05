@@ -78,6 +78,8 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'elzr/vim-json'
+let g:vim_json_syntax_conceal = 0
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
