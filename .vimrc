@@ -79,6 +79,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'elzr/vim-json'
+Plugin 'bling/vim-airline'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 let g:vim_json_syntax_conceal = 0
 
 " All of your Plugins must be added before the following line
