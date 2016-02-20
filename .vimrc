@@ -79,6 +79,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'elzr/vim-json'
+Plugin 'bling/vim-airline'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 let g:vim_json_syntax_conceal = 0
 
 " All of your Plugins must be added before the following line
@@ -213,9 +216,14 @@ vnoremap <silent> <expr> p <sid>Repl()
 
 "----------END----------------------
 
-"FuzzyFinder mappings
-"map :tf :FuzzyFinderTag<CR>
-"map ,t :FuzzyFinderTextMate<CR>
+"----- Delete without overwriting the yank buffer 
+" <leader>d deletes for real and <leader>p throws away the selected text and pastes the content of the default register. <leader>p allows me to paste the same text multiple times without having to use named registers. 
+" http://stackoverflow.com/questions/11993851/how-to-delete-not-cut
+
+vnoremap <leader>d "_d
+vnoremap <leader>p "_dP
+
+"----- END
 
 " OPEN RPROJECT WITH F9
 :nnoremap <silent> <F9> :Rproject<CR>
