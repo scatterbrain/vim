@@ -80,6 +80,27 @@ Plugin 'ervandew/supertab'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'elzr/vim-json'
 Plugin 'bling/vim-airline'
+Plugin 'fatih/vim-go' "brew install go, brew install gotags
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] } " go get -u github.com/golang/lint/golint
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+Plugin 'garyburd/go-explorer'
+Plugin 'majutsushi/tagbar' "brew install ctags
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+let g:UltiSnipsExpandTrigger="<c-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+nmap <F8> :TagbarToggle<CR>
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:vim_json_syntax_conceal = 0
@@ -88,6 +109,35 @@ let g:vim_json_syntax_conceal = 0
 call vundle#end()            " required
 filetype plugin indent on    " required
 " VUNDLE END "
+
+" GO tags
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
 
 " Highlight search terms...
 set hlsearch
@@ -128,7 +178,7 @@ set softtabstop=4
 set expandtab
 
 map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :CtrlPMixed<CR>
+map <leader>t :CtrlPMixed<CR>
 
 "Hilight overlong lines
 highlight OverLength ctermbg=red ctermfg=white guibg=#24010F
