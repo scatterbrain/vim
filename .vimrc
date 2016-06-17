@@ -108,6 +108,9 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:vim_json_syntax_conceal = 0
 
+"Doesn't work very well. Try again later
+"Plugin 'sourcegraph/sourcegraph-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
