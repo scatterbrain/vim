@@ -75,7 +75,9 @@ Plugin 'tpope/vim-projectionist.git'
 Plugin 'tpope/vim-dispatch.git'
 Plugin 'tpope/vim-fireplace'
 
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_map = '<leader>t'
+let g:ctrlp_cmd = 'CtrlP'
 Plugin 'ervandew/supertab'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'elzr/vim-json'
@@ -91,6 +93,7 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_list_type = "quickfix" "Make sure that quickfix window works
 Plugin 'garyburd/go-explorer'
 Plugin 'majutsushi/tagbar' "brew install ctags
 Plugin 'xolox/vim-easytags'
@@ -109,6 +112,9 @@ let g:vim_json_syntax_conceal = 0
 call vundle#end()            " required
 filetype plugin indent on    " required
 " VUNDLE END "
+
+map <C-p> :cprev<CR>
+map <C-n> :cnext<CR>
 
 " GO tags
 let g:tagbar_type_go = {
@@ -178,7 +184,6 @@ set softtabstop=4
 set expandtab
 
 map <leader>j :RopeGotoDefinition<CR>
-map <leader>t :CtrlPMixed<CR>
 
 "Hilight overlong lines
 highlight OverLength ctermbg=red ctermfg=white guibg=#24010F
