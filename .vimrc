@@ -46,7 +46,7 @@ let g:syntastic_javascript_checkers = ['jsxhint']
 " You need https://github.com/ten0s/syntaxerl installed
 let g:syntastic_erlang_checkers=['syntaxerl']
 
-Plugin 'Valloric/YouCompleteMe' "NOTE! You need to install cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer --omnisharp-completer
+Plugin 'Valloric/YouCompleteMe' "NOTE! You need to install cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer --omnisharp-completer --gocode-completer --tern-completer
 "NOTE2: If MacVim crashes to Python error, install it using brew with
 "a spesific version
 "cd /usr/local/Library/Formula
@@ -66,7 +66,11 @@ Plugin 'kchmck/vim-coffee-script'
 
 Plugin 'mxw/vim-jsx'
 Plugin 'wting/rust.vim'
+
+" Elixir
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
+
 Plugin 'Valloric/MatchTagAlways'
 
 " Clojure
