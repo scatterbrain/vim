@@ -25,6 +25,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+
 
 "Javascript plugins: http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
 
@@ -46,7 +48,7 @@ let g:syntastic_javascript_checkers = ['jsxhint']
 " You need https://github.com/ten0s/syntaxerl installed
 let g:syntastic_erlang_checkers=['syntaxerl']
 
-Plugin 'Valloric/YouCompleteMe' "NOTE! You need to install cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer --omnisharp-completer
+Plugin 'Valloric/YouCompleteMe' "NOTE! You need to install cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer --omnisharp-completer --gocode-completer --tern-completer
 "NOTE2: If MacVim crashes to Python error, install it using brew with
 "a spesific version
 "cd /usr/local/Library/Formula
