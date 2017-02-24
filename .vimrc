@@ -106,9 +106,14 @@ let g:UltiSnipsExpandTrigger="<c-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 nmap <F8> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
+
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:vim_json_syntax_conceal = 0
+
+Plugin 'slashmili/alchemist.vim'
+let g:alchemist_tag_map = 'gd'
 
 "Doesn't work very well. Try again later
 "Plugin 'sourcegraph/sourcegraph-vim'
